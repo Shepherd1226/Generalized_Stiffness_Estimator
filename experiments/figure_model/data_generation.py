@@ -9,7 +9,7 @@ import plot_from_data
 
 def main():
     # Set the random seed for reproducibility
-    np.random.seed(364374560) #364374560,3334444560
+    np.random.seed(3649601111) #3649601111 for data3,364374560 for data2,3334444560 for data1
     
     # Initialize generators and simulators
     F = Generater()

@@ -1,7 +1,7 @@
 from k_simulator import Elastomer0
 from k_simulator import Elastomer1
 from rnd_generator import Generater
-from kEstimator_lstm import DexHand_kEstimator
+from kEstimator_by_czy_usedinlstm import DexHand_kEstimator
 from plot import kAssessor
 from plot import evaluate
 import math
@@ -43,7 +43,7 @@ if __name__=='__main__':
     for i in range(round):
         kestimator.reset()
         cnt=0
-        # np.random.seed(364374560)
+        # np.random.seed(3649601111)
         FN=F.generate_func()
         hand,balloon=F.generate_elas()
         # hand=Elastomer0(delta_t=0.01,t0=1,F0=1,k1=0.1,k2=0.167,xa=1.5*100,xb=3*100)

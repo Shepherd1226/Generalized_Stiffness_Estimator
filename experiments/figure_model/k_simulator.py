@@ -37,7 +37,7 @@ class F_Pos_simulator():
         # 积分初始值
         self.x_start=0
         max_pos = np.trapz(np.interp(np.arange(0, 10, 0.01),self.F_values,np.exp(self.log_der_values)), dx=0.01) + self.x_start
-        self.x_drifter=Drifter(self.x_start,max_pos*0.2,-max_pos*0.1,max_pos*0.2*0.1,-max_pos*0.1*0.1)#(self.x_start,max_pos*0.04,-max_pos*0.02,max_pos*0.04*0.1,-max_pos*0.02*0.1)
+        self.x_drifter=Drifter(self.x_start,max_pos*0.06,-max_pos*0.02,max_pos*0.06*0.1,-max_pos*0.02*0.1)# for data 3#(self.x_start,max_pos*0.2,-max_pos*0.1,max_pos*0.2*0.1,-max_pos*0.1*0.1) for data 2#(self.x_start,max_pos*0.04,-max_pos*0.02,max_pos*0.04*0.1,-max_pos*0.02*0.1) original
 
     def step(self):
         self.x_start=self.x_drifter.get_new()
